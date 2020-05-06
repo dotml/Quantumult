@@ -13,28 +13,28 @@ function getRandomInt(max) {
 
 function City_ValidCheck(para) {
   if(para) {
-  return para
+    return para
   } else
   {
-  return default_city
+    return default_city
   }
 }
 
 function ISP_ValidCheck(para) {
   if(para) {
-  return para
+    return para
   } else
   {
-  return default_isp
+    return default_isp
   }
 }
 
 function Area_check(para) {
-  if(para=="中华民国"){
-  return "台湾"
+  if(para=="Taiwan"){
+    return "China Taiwan"
   } else
   {
-  return para
+    return para
   }
 }
 var body = $response.body;
