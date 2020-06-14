@@ -1,3 +1,7 @@
+if ($response.statusCode != 200) {
+    $done(Null);
+}
+
 var default_city = "Los Angeles";
 var default_isp = "Cross-GFW.org";
 
