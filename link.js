@@ -1,5 +1,5 @@
 if ($response.statusCode !== 200) {
-    $done(Null);
+    $done({'ooops','Looks like something went wrong !'});
 }
 
 var default_city = "Las Vegas";
