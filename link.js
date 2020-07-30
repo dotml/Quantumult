@@ -1,4 +1,4 @@
-if ($response.statusCode !== 200) {
+if ($response.statusCode != 200) {
     $done(Null);
 }
 
@@ -33,7 +33,7 @@ var title = obj['country'];
 var subtitle = default_city + default_org;
 
 var index = obj['org'].indexOf(' (');
-if (index !== -1) {
+if (index != -1) {
     subtitle = City_Check(obj['city']) + '-' + Org_Check(obj['org'].substring(0, index));
 } else {
     subtitle = City_Check(obj['city']) + '-' + Org_Check(obj['org']);
