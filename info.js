@@ -44,9 +44,9 @@ var obj = JSON.parse(body);
 var title = obj['country'];
 var subtitle = default_city + default_org;
 
-var index = obj['org'].indexOf(' (');
+var index = obj['org'].indexOf('(');
 if (index != -1) {
-    subtitle = City_Check(obj['city']) + '-' + Org_Check(obj['org'].substring(0, index));
+    subtitle = City_Check(obj['city']) + '-' + Org_Check(obj['org'].substring(0, index).trim());
 } else {
     subtitle = City_Check(obj['city']) + '-' + Org_Check(obj['org']);
 }
