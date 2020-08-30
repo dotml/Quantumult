@@ -42,7 +42,7 @@ async function fetchInfo(sub) {
         const subkey = Object.keys(headers).filter(k => /SUBSCRIPTION-USERINFO/i.test(k))[0];
         const userinfo = headers[subkey];
         if (!userinfo) {
-            $.notify("🚀 [机场流量]", `❌ 机场：${sub.name} 未提供流量信息！`);
+            $.notify("🌵 [机场流量]", `❌ 机场：${sub.name} 未提供流量信息！`);
         }
         const KEY_o_now = "o_now" + sub.name;
         const KEY_today_flow = "today_flow" + sub.name;
@@ -69,7 +69,7 @@ async function fetchInfo(sub) {
         const mutime = (utime / 60000) % 60;
         const subtitle = `剩余流量: ${(residue_m / 1024).toFixed(2)} G`;
         const details = `
-📌 [使用情况]
+🔋 [使用情况]
 ${
             hutime == 0
                 ? "在过去的" +
@@ -88,7 +88,7 @@ ${
 📝 [统计]
 总上传: ${(upload_k / 1073741824).toFixed(2)} G
 总下载: ${(download_k / 1073741824).toFixed(2)} G
-🛎 [到期时间]
+⏳ [到期时间]
 ${expires}`;
 
         if (sub.icon) {
