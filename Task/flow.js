@@ -64,12 +64,12 @@ async function fetchInfo(sub) {
         const todayflow = $.read(KEY_today_flow) - residue;
         $.write(residue, KEY_today_flow);
         $.write(dnow, KEY_o_now);
-        const title = `🚀 [机场流量] ${sub.name}`;
+        const title = `🌵 [机场流量] ${sub.name}`;
         const hutime = parseInt(utime / 3600000);
         const mutime = (utime / 60000) % 60;
         const subtitle = `剩余流量: ${(residue_m / 1024).toFixed(2)} G`;
         const details = `
-🔋 [使用情况]
+🍂 [使用情况]
 ${
             hutime == 0
                 ? "在过去的" +
@@ -85,10 +85,10 @@ ${
                 todayflow.toFixed(2) +
                 " M流量"
         }
-📝 [统计]
+🍀 [统计]
 总上传: ${(upload_k / 1073741824).toFixed(2)} G
 总下载: ${(download_k / 1073741824).toFixed(2)} G
-⏳ [到期时间]
+🍁 [到期时间]
 ${expires}`;
 
         if (sub.icon) {
