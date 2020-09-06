@@ -270,7 +270,7 @@ function realtimeWeather() {
 🌡 体感${realtime.life_index.comfort.desc} ${
       realtime.apparent_temperature
     } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
-☂️ 紫外线 ${realtime.life_index.ultraviolet.desc} ☁️ ${mapWind(
+☂️ 紫外线 ${realtime.life_index.ultraviolet.desc} 🪁 ${mapWind(
       realtime.wind.speed,
       realtime.wind.direction
     )}
